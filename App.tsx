@@ -5,9 +5,19 @@ import DOMPurify from 'dompurify';
 export default function App() {
   console.log('stuff happends');
 
-  let customHTML = '<div onmouseover=alert(1)>iam</div>';
+  let customHTML: string = `
+  <script>
+  console.log("loaded");
+  </script>
+  <style>
+    h1 {color:red;}
+    p {color:blue;}
+  </style><div style="background-color:powderblue;" onmouseover=alert(1)>iam</div>`;
 
-  let santizeHTML = DOMPurify.sanitize(customHTML);
+  var config: DOMPurify.Config = {
+    FORCE_BODY: true,
+  };
+  let santizeHTML: string = DOMPurify.sanitize(customHTML, config) as string;
   return (
     <React.Fragment>
       <div>
