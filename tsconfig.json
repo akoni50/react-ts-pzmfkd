@@ -5,7 +5,8 @@
     // "removeComments": true,
     // "preserveConstEnums": true,
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsxFactory": "React.createElement"
     // "lib": [
     //   "es6",
     //   "dom",
