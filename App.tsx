@@ -7,6 +7,7 @@ export default function App() {
   console.log('stuff happends');
   const testings = new test();
   testings.assign();
+  testings.customHTML = `<script>alert(1)</script>`;
 
   var config: DOMPurify.Config = {
     FORCE_BODY: true,
