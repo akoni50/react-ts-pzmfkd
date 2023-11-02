@@ -2,6 +2,8 @@ import * as React from 'react';
 import './style.css';
 import DOMPurify from 'dompurify';
 import { test } from './test';
+import FuncComp from './testfunc';
+import Testclass from './testclass';
 
 export default function App() {
   console.log('stuff happends');
@@ -19,12 +21,14 @@ export default function App() {
   ) as string;
   return (
     <React.Fragment>
-      <div style={{ height: '500px', overflow: 'auto' }}>
+      {/* <div style={{ height: '500px', overflow: 'auto' }}>
         <p>{testings.customHTML}</p>
       </div>
       <div>
         <p>{santizeHTML}</p>
-      </div>
+      </div> */}
+      <FuncComp />
+      <Testclass />
     </React.Fragment>
   );
 }
