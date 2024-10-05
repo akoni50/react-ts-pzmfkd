@@ -27,7 +27,7 @@ class Testclass extends React.Component<any, mystate> {
             this.setState({ change: this.state.change + 1 });
           }}
         >
-          CLASS
+          should not be bold
         </button>
       </div>
     );

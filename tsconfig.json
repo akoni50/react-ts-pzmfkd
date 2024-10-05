@@ -6,7 +6,8 @@
     // "preserveConstEnums": true,
     "sourceMap": true,
     "esModuleInterop": true,
-    "jsxFactory": "React.createElement"
+    "jsxFactory": "React.createElement",
+    "jsx": "react"
     // "lib": [
     //   "es6",
     //   "dom",
