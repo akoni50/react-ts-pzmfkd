@@ -14,6 +14,7 @@ export default function App() {
   testings.customHTML = `<script>alert(1)</script>`;
 
   const [containerRender, setContainer] = React.useState(null);
+  const [boolstate, setboolstate] = React.useState('parent');
 
   var config: DOMPurify.Config = {
     FORCE_BODY: true,
@@ -39,14 +40,14 @@ export default function App() {
       <div>
         <p>{santizeHTML}</p>
       </div> */}
-      {/* <FuncComp /> */}
-      <Testclass />
+      <FuncComp boolstate={boolstate} />
+      {/* <Testclass /> */}
       <br />
       <br />
       <div className="shadowhere"></div>
 
-      {containerRender &&
-        ReactDOM.createPortal(<Testshadow />, containerRender)}
+      {/* {containerRender &&
+        ReactDOM.createPortal(<Testshadow />, containerRender)} */}
     </React.Fragment>
   );
 }
